@@ -29,6 +29,7 @@ server.
 Changing our account to a local account for password login via SSH.
 
 ![](./media/image7.jpg)
+
 Create a custom decoder file for our sshd.log file. Don't forget to
 write the decoder for invalid user attempts **above** the one for failed
 attempts on existing users to prevent collisions.
@@ -69,6 +70,7 @@ We can see our logs in the Wazuh manager.
 
 ![](./media/image9.jpg)
 ![](./media/image10.jpg)
+
 Create custom rules to detect brute force attempts. You can copy the
 default rules for Linux SSH on the Wazuh server, but you need to add a
 few lines.\
