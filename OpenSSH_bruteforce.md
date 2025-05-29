@@ -2,7 +2,7 @@
 
 ![](./media/image1.jpg)
 
-First, we ensure that we can ping the target device.
+First, we make sure that we can ping the target device.
 
 ![](./media/image2.jpg)
 
