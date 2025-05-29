@@ -1,0 +1,48 @@
+
+<decoder name="sshd-logpath-root">
+
+  <prematch>\d+ \d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d.\d+ </prematch>
+
+</decoder>
+
+<decoder name="opensshd-accepted-password">
+
+  <parent>sshd-logpath-root</parent>
+
+  <use_own_name>true</use_own_name>
+
+  <prematch offset="after_parent" >Accepted</prematch>
+
+  <regex offset="after_prematch">^ password for (\S+) from (\S+) port (\d+)</regex>
+
+  <order>user, srcip, srcport</order>
+
+</decoder>
+
+<decoder name="opensshd-failed-invalid-user">
+
+  <parent>sshd-logpath-root</parent>
+
+  <use_own_name>true</use_own_name>
+
+  <prematch offset="after_parent" >invalid</prematch>
+
+  <regex offset="after_prematch">^ user (\S+) from (\S+) port (\d+)</regex>
+
+  <order>user, srcip, srcport</order>
+
+</decoder>
+
+  <decoder name="opensshd-failed-password">
+
+  <parent>sshd-logpath-root</parent>
+
+  <use_own_name>true</use_own_name>
+
+  <prematch offset="after_parent" >Failed</prematch>
+
+  <regex offset="after_prematch">^ password for (\S+) from (\S+) port (\d+)</regex>
+
+  <order>user, srcip, srcport</order>
+
+</decoder>
