@@ -99,7 +99,7 @@ I use netsh to block the attacker's IP.
 
 ![](./media/image17.jpg)
 
-Add these lines to the ossec.conf file on the Wazuh manager. It means
+Add these lines to the ossec.conf file on the Wazuh manager and restart wazuh-manager service. It means
 that if rule 100013 is triggered, then netsh will run using alert
 credentials.
 
