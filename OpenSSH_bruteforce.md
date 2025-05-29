@@ -69,7 +69,7 @@ end of documentation.
 We can see our logs in the Wazuh manager.
 
 ![](./media/image9.jpg)
-![](./media/image10.jpg)
+![](./media/image10.JPG)
 
 Create custom rules to detect brute force attempts. You can copy the
 default rules for Linux SSH on the Wazuh server, but you need to add a
@@ -120,7 +120,7 @@ And we can see that our attack was stopped because netsh blocked the IP.
 Detailed logs in the Wazuh dashboard. We can also see the previous
 related logs.
 
-![](./media/image22.jpg)
+![](./media/image22.JPG)
 
 And the Active Response Alert.
 
